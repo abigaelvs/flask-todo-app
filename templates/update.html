@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container justify-content-center">
+    <br>
+    <h1 class="text-center">Task Master</h1>
+
+    <form action="/update/{{task.id}}" method="POST">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Add a Task</label>
+            <input type="text" class="form-control" id="content" name="content" value="{{task.content}}">
+        </div>
+        <input type="submit" value="Update">
+    </form>
+</div>
+
+{% endblock content %}
